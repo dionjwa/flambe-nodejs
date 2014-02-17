@@ -3,17 +3,13 @@
 -debug
 -D flambe
 
-# -lib nodejs
---macro allowPackage("sys")
--D nodejs
--cp ../node-std/src
+-lib nodejs
 
 -cp demo/src
 -cp lib/flambe/src
 
 -main flambe.demo.NodeRendering
 
--js demo/deploy/haxe.js
+-js haxe.js
 
--cmd /opt/local/bin/node demo/deploy/haxe.js
-#getContext2d
+# -cmd /opt/local/bin/node demo/deploy/haxe.js
