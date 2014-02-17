@@ -1,0 +1,15 @@
+--macro flambe.platform.ManifestBuilder.use('assets')
+
+-debug
+-D flambe
+
+-lib nodejs
+
+-cp src
+-cp ../lib/flambe/src
+
+-main flambe.demo.NodeRendering
+
+-js deploy/haxe.js
+
+# -cmd node deploy/haxe.js
