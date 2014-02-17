@@ -14,6 +14,12 @@ Here are a few reasons:
 * You want to generate a movie using your game engine.  You can use the png images for whatever purpose you want.
 
 
-To install:
+To install and run:
 
-git clone --recursive https://github.com/dionjwa/flambe-nodejs
+	git clone --recursive https://github.com/dionjwa/flambe-nodejs
+	cd flambe-nodejs
+	npm install canvas
+	haxe build.hxml
+	node haxe.js
+
+If everything worked you'll have a 'frames' folder in the current directory with some of the frames rendered.  The control over what to render is in src/flambe/demo/NodeRendering.hx
