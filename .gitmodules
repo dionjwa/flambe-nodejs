@@ -1,0 +1,4 @@
+[submodule "lib/flambe"]
+	path = lib/flambe
+	url = https://github.com/dionjwa/flambe
+	branch = node_canvas
