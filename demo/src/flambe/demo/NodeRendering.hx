@@ -5,6 +5,8 @@ import haxe.Json;
 
 import flambe.System;
 import flambe.display.ImageSprite;
+import flambe.display.TextSprite;
+import flambe.display.Font;
 import flambe.asset.Manifest;
 import flambe.asset.AssetPack;
 
@@ -69,5 +71,12 @@ class NodeRendering
 
 		texture.graphics.drawPattern(patternTexture, 0, 0, 300, 400);
 		NodePlatform.instance.step();
+
+
+		var font = new Font(pack, "FontAwesome");
+		var myTextField = new TextSprite(font, "");
+		System.root.addChild(new Entity().add(myTextField));
+		NodePlatform.instance.step();
+		// NodePlatform.instance.step();
 	}
 }

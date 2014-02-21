@@ -12,4 +12,4 @@
 
 -js haxe.js
 
-# -cmd /opt/local/bin/node demo/deploy/haxe.js
+-cmd /opt/local/bin/node haxe.js
