@@ -7,8 +7,9 @@ import flambe.System;
 import flambe.display.ImageSprite;
 import flambe.display.TextSprite;
 import flambe.display.Font;
-import flambe.asset.Manifest;
+import flambe.platform.ManifestBuilder;
 import flambe.asset.AssetPack;
+import flambe.asset.Manifest;
 
 import flambe.platform.nodejs.NodePlatform;
 
@@ -32,7 +33,8 @@ class NodeRendering
 		System.init();
 		System.stage.requestResize(300, 300);
 
-		var promise = System.loadAssetPack(Manifest.build("bootstrap"));
+		flambe.platform.ManifestBuilder.use('demo/assets');
+		var promise = System.loadAssetPack(Manifest.fromAssets("bootstrap"));
 
 		promise.success.connect(onAssetPackLoaded);
 		promise.error.connect(function (err) {
@@ -65,7 +67,7 @@ class NodeRendering
 		NodePlatform.instance.step();
 		sprite.x._ = 10;
 
-		var patternTexture = System.createTexture(20, 20);
+		var patternTexture = System.renderer.createTexture(20, 20);
 		patternTexture.graphics.fillRect(0xff0000, 0, 0, 3, 3);
 		patternTexture.graphics.fillRect(0xffff00, 6, 6, 3, 4);
 

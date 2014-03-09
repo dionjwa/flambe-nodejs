@@ -19,6 +19,7 @@ To install and run:
 	git clone --recursive https://github.com/dionjwa/flambe-nodejs
 	cd flambe-nodejs
 	npm install canvas
+	npm install source-map-support
 	haxe build.hxml
 	node haxe.js
 
