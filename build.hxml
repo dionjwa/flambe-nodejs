@@ -12,4 +12,4 @@
 
 -js haxe.js
 
--cmd /opt/local/bin/node haxe.js
+# -cmd /opt/local/bin/node haxe.js
