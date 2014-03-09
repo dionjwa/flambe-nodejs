@@ -32,6 +32,8 @@ class NodeRendering
 
 		System.init();
 		System.stage.requestResize(300, 300);
+		NodePlatform.instance.isCanvasRendererEnabled = true;
+		NodePlatform.instance.isRenderingEveryFrame = true;
 
 		flambe.platform.ManifestBuilder.use('demo/assets');
 		var promise = System.loadAssetPack(Manifest.fromAssets("bootstrap"));
@@ -79,6 +81,9 @@ class NodeRendering
 		var myTextField = new TextSprite(font, "");
 		System.root.addChild(new Entity().add(myTextField));
 		NodePlatform.instance.step();
+#if show_canvas_demo
+		NodePlatform.instance.startMainLoop();
+#end
 		// NodePlatform.instance.step();
 	}
 }

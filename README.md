@@ -20,11 +20,19 @@ To install and run the demo:
 	cd flambe-nodejs
 	npm install canvas
 	npm install source-map-support
+	npm install websocket
 	haxe build.hxml
 	node haxe.js
 
 You will see some images created in the terminal.  These images are the result of different rendering operations.
 
-
-
 If everything worked you'll have a 'frames' folder in the current directory with some of the frames rendered.  The control over what to render is in src/flambe/demo/NodeRendering.hx
+
+You can also view the canvas in a web browser, and send mouse events.
+
+	haxe -D node_flambe_server_enabled -D build.hxml
+	node haxe.js
+
+Then open a browser to http://localhost:7000
+
+The canvas element detects mouse events and sends them back to the node client process.
