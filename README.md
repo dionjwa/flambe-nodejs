@@ -30,7 +30,7 @@ If everything worked you'll have a 'frames' folder in the current directory with
 
 You can also view the canvas in a web browser, and send mouse events.
 
-	haxe -D node_flambe_server_enabled -D build.hxml
+	haxe -D node_flambe_server_enabled build.hxml
 	node haxe.js
 
 Then open a browser to http://localhost:7000
