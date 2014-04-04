@@ -32,9 +32,10 @@ class NodeRendering
 
 		System.init();
 		System.stage.requestResize(300, 300);
+#if !node_flambe_server_enabled
 		NodePlatform.instance.isCanvasRendererEnabled = true;
 		NodePlatform.instance.isRenderingEveryFrame = true;
-
+#end
 		flambe.platform.ManifestBuilder.use('demo/assets');
 		var promise = System.loadAssetPack(Manifest.fromAssets("bootstrap"));
 
