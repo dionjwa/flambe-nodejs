@@ -1,5 +1,4 @@
-flambe-nodejs
-=============
+## flambe-nodejs
 
 The Flambe game engine running on headless server or rendering to PNGs.
 
@@ -36,3 +35,11 @@ You can also view the canvas in a web browser, and send mouse events.
 Then open a browser to http://localhost:7000
 
 The canvas element detects mouse events and sends them back to the node client process.
+
+## flambe-cocos2d-x
+
+Why?
+
+* Cocos2d-x is a highly performant cross-platform 2D game engine.
+* Via the Javascript bindings, you can write haxe code and have it loaded 
+* Dynamic reloading of code (without recompilation).

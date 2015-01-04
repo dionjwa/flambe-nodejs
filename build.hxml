@@ -3,13 +3,18 @@
 -debug
 -D flambe
 
--lib nodejs
+#The cocos2d-x platform
+-D cocos2dx
+
+# -lib nodejs
+-lib format
 
 -cp demo/src
 -cp lib/flambe/src
 
--main flambe.demo.NodeRendering
+# -main flambe.demo.NodeRendering
+-main flambe.demo.CocosRendering
 
--js haxe.js
+-js cocos-project/main.js
 
 # -cmd /opt/local/bin/node haxe.js
